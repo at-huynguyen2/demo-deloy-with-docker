@@ -1,0 +1,2 @@
+module ChatRoomsControllerHelper
+end

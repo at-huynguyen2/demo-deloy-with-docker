@@ -1,0 +1,30 @@
+# Logfile created on 2017-07-28 16:51:07 +0700 by logger.rb/v1.2.7
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-28 16:51:07 +0700 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [5ea135c8] Running /usr/bin/env mkdir -p /tmp as huynguyen2@http
+ DEBUG [5ea135c8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-28 16:51:23 +0700 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [5e939b12] Running /usr/bin/env mkdir -p /tmp as huynguyen2@0.0.0.0
+ DEBUG [5e939b12] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-28 16:51:52 +0700 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [54759830] Running /usr/bin/env mkdir -p /tmp as root@0.0.0.0
+ DEBUG [54759830] Command: /usr/bin/env mkdir -p /tmp
+  INFO [54759830] Finished in 0.204 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-demo_delop_with_docker-production-huy.sh 0.0%
+  INFO Uploading /tmp/git-ssh-demo_delop_with_docker-production-huy.sh 100.0%
+  INFO [f94619c9] Running /usr/bin/env chmod 700 /tmp/git-ssh-demo_delop_with_docker-production-huy.sh as root@0.0.0.0
+ DEBUG [f94619c9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-demo_delop_with_docker-production-huy.sh
+  INFO [f94619c9] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [6077e14c] Running /usr/bin/env git ls-remote git@github.com:at-huynguyen2/demo-deloy-with-docker.git HEAD as root@0.0.0.0
+ DEBUG [6077e14c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo_delop_with_docker-production-huy.sh" ; /usr/bin/env git ls-remote git@github.com:at-huynguyen2/demo-deloy-with-docker.git HEAD )
+ DEBUG [6077e14c] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [6077e14c] 	c6c5f61325da456651947e7d6b2002e9dcbdf43a	HEAD
+  INFO [6077e14c] Finished in 3.729 seconds with exit status 0 (successful).
+  INFO [f2c3bdb6] Running /usr/bin/env mkdir -p /var/www/demo_delop_with_docker/shared /var/www/demo_delop_with_docker/releases as root@0.0.0.0
+ DEBUG [f2c3bdb6] Command: /usr/bin/env mkdir -p /var/www/demo_delop_with_docker/shared /var/www/demo_delop_with_docker/releases
+  INFO [f2c3bdb6] Finished in 0.108 seconds with exit status 0 (successful).

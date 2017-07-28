@@ -1,0 +1,11 @@
+<%= javascript_tag do %>
+  window.roomID = '<%= @room_id %>'
+<% end %>
+<h3 style="color: maroon">Chat room</h3>
+
+<div id="messages" data-chat-room-id="">
+  <%= render @messages %>
+</div>
+
+<label>Say something: </label>
+<input id="chat-speak" type="text" data-behavior="room_speaker">

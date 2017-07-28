@@ -1,0 +1,33 @@
+I"Ü(function() {
+  App.room = App.cable.subscriptions.create({
+    channel: "RoomChannel",
+    roomId: 1
+  }, {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      return $('#messages').append(data['message']);
+    },
+    appendLine: function(data) {
+      var html;
+      html = this.createLine(data);
+      console.log(data);
+      return $("[data-chat-room='Best Room']").append(html);
+    },
+    createLine: function(data) {
+      return "<article class=\"chat-line\">\n  <span class=\"speaker\">" + data["sent_by"] + "</span>\n  <span class=\"body\">" + data["body"] + "</span>\n</article>";
+    },
+    speak: function(message) {
+      return this.perform('speak', {
+        message: message
+      });
+    }
+  }, $(document).on('keypress', '#chat-speak', function(event) {
+    if (event.keyCode === 13) {
+      App.room.speak(event.target.value, event.target.value = "");
+      return event.preventDefault();
+    }
+  }));
+
+}).call(this);
+:ET
